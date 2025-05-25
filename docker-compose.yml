@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"  # Ajuste conforme necessário
+    command: python -m src
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped
+
+  test:
+    build: .
+    volumes:
+      - .:/app
+    command: pytest
+    environment:
+      - PYTHONPATH=/app
+      - APP_ENV=test

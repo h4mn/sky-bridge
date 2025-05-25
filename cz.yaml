@@ -1,0 +1,9 @@
+commitizen:
+  name: cz_conventional_commits
+  tag_format: $version
+  version: 0.1.0
+  version_files:
+    - VERSION
+    - pyproject.toml:version
+  update_changelog_on_bump: true
+  changelog_file: CHANGELOG.md
