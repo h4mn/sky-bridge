@@ -150,7 +150,7 @@ chmod +x script/sb.sh
 
 ### Configuração Recomendada
 
-1. **Windows**: 
+1. **Windows**:
    - Adicione o diretório `script\` ao PATH do sistema
    - Ou crie um atalho no diretório de trabalho
 

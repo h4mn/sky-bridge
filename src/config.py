@@ -1,12 +1,11 @@
 """ Configuração do projeto. """
 
-from pathlib import Path
-from typing import Dict
+# from dotenv import load_dotenv
 
-from dotenv import load_dotenv
+from src.types import Path
 
 # Carrega variáveis de ambiente
-load_dotenv()
+# load_dotenv()
 
 # Diretórios do projeto
 BASE_DIR = Path(__file__).parent.parent

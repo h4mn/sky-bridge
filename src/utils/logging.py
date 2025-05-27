@@ -1,12 +1,11 @@
 """ Configuração de logging para Sky Bridge. """
 import logging
 import sys
-from pathlib import Path
 
-def setup_logging(
-    level: str = "INFO",
-    log_file: Path | None = None
-) -> logging.Logger:
+from src.types import Path
+
+
+def setup_logging(level: str = "INFO", log_file: Path | None = None) -> logging.Logger:
     """Configura o logging para a aplicação."""
     logger = logging.getLogger("sky_bridge")
     logger.setLevel(level)

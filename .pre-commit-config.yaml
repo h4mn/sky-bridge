@@ -8,43 +8,56 @@ repos:
     -   id: check-added-large-files
     -   id: check-toml
     -   id: check-json
+
     -   id: mixed-line-ending
+        name: Mixed line ending (LF para arquivos de desenvolvimento)
         args: ['--fix=lf']
+        files: '.*\.(py|md|yaml|yml|json|toml)$'
+
+    -   id: mixed-line-ending
+        name: Mixed line ending (CRLF para scripts Windows)
+        args: ['--fix=crlf']
+        files: '.*\.(bat|cmd)$'
 
 -   repo: https://github.com/psf/black
     rev: 23.3.0
     hooks:
     -   id: black
-        language_version: python3.11
+        language_version: python3.10
 
 -   repo: https://github.com/pycqa/isort
     rev: 5.12.0
     hooks:
     -   id: isort
         args: ["--profile", "black", "--filter-files"]
+        language_version: python3.10
 
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.3.0
     hooks:
     -   id: mypy
-        additional_dependencies: [types-all]
-        args: [--strict]
+        additional_dependencies: [pydantic]
+        args: [--strict, --ignore-missing-imports]
+        language_version: python3.10
 
 -   repo: https://github.com/pycqa/pylint
     rev: v2.17.4
     hooks:
     -   id: pylint
+        additional_dependencies: [typer, rich, pytest]
         args:
         - --max-line-length=88
         - --ignore-imports=yes
         - --disable=all
         - --enable=E,F,W  # Erros, Falhas e Warnings
+        language_version: python3.10
 
 -   repo: https://github.com/commitizen-tools/commitizen
     rev: v3.2.2
     hooks:
     -   id: commitizen
         stages: [commit-msg]
+        language_version: python3.10
 
 -   repo: local
     hooks:

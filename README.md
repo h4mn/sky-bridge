@@ -162,7 +162,7 @@ Contribuições são bem-vindas! Consulte [CONTRIBUTING.md](CONTRIBUTING.md) par
 ### Author 👨‍💻
 
 <div align="center">
-  
+
 ![Sky Icon](https://em-content.zobj.net/thumbs/120/microsoft/319/bridge-at-night_1f309.png)
 <br />
 [![Assinado por h4mn](https://img.shields.io/badge/feito%20por-h4mn-black?style=flat-square&logo=github)](https://github.com/h4mn)

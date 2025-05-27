@@ -20,7 +20,7 @@ set "RESET=%ESC%[0m"
 @cls
 echo.
 echo  %CYAN%Sky Bridge CLI%RESET% v0.1.0
-echo  %GREEN%Framework Python para Projetos Modernos%RESET%
+echo  %GREEN%Hub de suporte para agentics%RESET%
 echo  -----------------------------------------------------
 echo.
 :: ═══════════════════════════════════════════════════════════════
